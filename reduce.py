@@ -8,16 +8,7 @@ from os.path import join
 import glob
 import numpy as np
 import time
-import matplotlib.pyplot as plt
-from matplotlib import colors
-from matplotlib import cm
-from matplotlib import markers
-from scipy.ndimage import gaussian_filter as gf
-from scipy.interpolate import interp1d
-from scipy.optimize import curve_fit
-from pencil.math.stats import fit_exp, fit_power
-import subprocess as sb
-
+import inspect
 
 def main():
     f = pc.read.var()
@@ -32,6 +23,7 @@ def main():
         uu_xyaver = np.sum(uu,3)
         aa_xyaver = np.sum(aa,3)
         g = eta*uu_xyaver - rho*aa_xyaver
+    print("DONE\n");
 
 if __name__ == "__main__":
     main()
